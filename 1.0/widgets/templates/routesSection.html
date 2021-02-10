@@ -1,0 +1,30 @@
+<div>
+	<div style="font-size: 28px; margin: 25px 15%; text-align: justify; text-justify: inter-word;">Check the potential risk on available routes</div>
+	<div style="margin: 25px 15%;">
+		You can do this by selecting in the drop down menus (below) a donor port and recipient port for a route among those ports where there is comparable data.
+	</div>
+	<div style="margin-left: 15%; margin-top: 25px;">Select donor port</div>
+	<div id="startPortSelectContainer" style="margin-left: 15%; width: 200px; border: 1px solid #00497F; padding-right: 1px;"></div>
+	<div style="margin-left: 15%; margin-top: 10px;">Select recipient port</div>
+	<div id="endPortSelectContainer" style="margin-left: 15%; width: 200px; border: 1px solid #00497F; padding-right: 1px;"></div>
+	<div id="startAlgorithm" class="blueButton" style="margin-left: 15%; display: inline-block;">Run Risk Analysis</div>
+	<div id="downloadPDF" class="leftPanelLink" style="margin-left: 15%; display: none;">Get PDF report</div>
+	<div id="downloadPDFNote" style="margin-left: 15%; font-size: 14px; font-weight: bold; color: #800000; display: none;">Note: if PDF report is not opened, browser might be preventing it from opening. Click this link to <a id="pdfLink" href="#" target="_blank">view PDF report</a>.</div>
+	<div id="notSelectedPortsMessage" style="margin-left: 15%; margin-top: 25px; font-size: 16px; display: none;">Please, select ports.</div>
+	<div id="similarPortsMessage" style="margin-left: 15%; margin-top: 25px; font-size: 16px; display: none;">Please, select different ports.</div>
+	<div id="travelingMessage" style="margin-left: 15%; margin-top: 25px; font-size: 16px;"></div>
+	<div id="riskMessage" style="margin-left: 15%; margin-top: 10px; font-size: 28px;"></div>
+	<div id="riskInfoContainer" style="margin-left: 15%; margin-top: 10px; display: none;">
+		<div id="yearNoteStart" style="margin-top: 10px; font-weight: bold; color: rgb(128, 0, 0); display: none;"></div>
+		<div id="yearNoteEnd" style="margin-top: 10px; font-weight: bold; color: rgb(128, 0, 0); display: none;"></div>
+		<div id="samplingNoteStart" style="margin-top: 10px; font-weight: bold; color: rgb(128, 0, 0); display: none;"></div>
+		<div id="samplingNoteEnd" style="margin-top: 10px; font-weight: bold; color: rgb(128, 0, 0); display: none;"></div>
+		<div style="margin-top: 10px; font-size: 16px;">Route details:</div>
+		<div id="salinityMessage" style="margin-top: 10px; font-size: 16px;"></div>
+		<div id="speciesMessage" style="margin-top: 10px; font-size: 16px;"></div>
+		<div id="riskSpeciesContainer" style="margin-top: 10px; margin-left: 20px; display: none;"></div>
+		<img id="diagramHighRisk" class="riskImg" style="display: none;" src="img\RA algorithm_high_risk.png"></img>
+		<img id="diagramLowRiskSalinity" class="riskImg" style="display: none;" src="img\RA algorithm_low_risk_salinity.png"></img>
+		<img id="diagramLowRiskTS" class="riskImg" style="display: none;" src="img\RA algorithm_low_risk_TS.png"></img>
+	</div>
+</div>

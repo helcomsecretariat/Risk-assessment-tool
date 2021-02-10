@@ -1,0 +1,158 @@
+<div>
+	<div id="searchInfoContainer" style="margin: 10px 15%;">
+		<div style="font-size: 18px;"> Search and download </div>
+		<div style="font-size: 12px;">More species observations data from the Baltic Sea can accessed from <a href="https://maps.helcom.fi/website/biodiversity/" target="_blank">HELCOM Biodiversity Database</a>.</div>
+		<div id="portSearchButton" class="blueButton" style="display: inline-block;">Search in ports</div>
+		<div id="aquaSearchButton" class="blueButton" style="display: inline-block;">Search AquaNIS</div>
+		<div id="downloadButton" class="blueButton" style="display: inline-block;">Download</div>
+		<div id="accumulationButton" class="blueButton" style="display: inline-block;">Species accumulative curves</div>
+	</div>
+
+	<div id="searchPortContainer" style="margin: 10px 15%; display: none;">
+		<div style="font-size: 14px;">Search for species observation locations in ports.</div>
+		<div>
+			<div id="searchButtonPortTop"class="searchTaskButton" style="margin-bottom: 10px;">Search</div>
+			<div id="clearFiltersButtonPortTop"class="searchTaskButton" style="margin-bottom: 10px;">Reset filters</div>
+			<div id="clearMapButtonPortTop"class="searchTaskButton" style="margin-bottom: 10px;">Clear map</div>
+		</div>
+		<div id="searchFiltersContainer" style="margin-top: 10px; clear: both;">
+			<div class="inputSection" style="margin-top: 20px;">
+				<input id="speciesNameInput" class="searchInput"/>
+			</div>
+			<div style="font-size: 12px; color: #444444;"> Start typing species name and then choose one from the list. </div>
+			<div id="speciesNameStatusInfo" style="display: none; color: #800000">
+				<div>
+					<span>Your selected species name status is </span>
+					<span id="speciesNameStatus" style="font-weight: bold;"></span>
+				</div>
+				<div id="speciesAcceptedNameInfo" style="display: none;">
+					<span>Accepted name of your selected species is </span>
+					<span id="speciesAcceptedName" style="font-weight: bold;"></span>
+				</div>
+			</div>
+
+			<div style="font-size: 14px; margin-top: 20px;"> Observations year </div>
+			<div class="inputSection" style="width: 70px; display: inline-block;">
+				<input id="obsYear1Input" class="searchInput" style="width: 50px;" placeholder="From"/>
+			</div>
+			<div class="inputSection" style="width: 70px; display: inline-block;">
+				<input id="obsYear2Input" class="searchInput" style="width: 50px;" placeholder="To"/>
+			</div>
+			<div style="font-size: 12px; color: #444444;"> Input for the year range. If you are searching for a single year, please use the same year in both fields. Leave one field blank if searching for older than or newer than. </div>
+
+			<div id="portFilterSection" class="titlePaneSection" style="margin-top: 20px;"></div>
+
+			<div id="samplingGroupFilterSection" class="titlePaneSection" style="margin-top: 20px;"></div>
+
+			<div id="raCategoryFilterSection"class="titlePaneSection" style="margin-top: 20px;"></div>
+		</div>
+		<div>
+			<div id="searchButtonPortBottom"class="searchTaskButton" style="margin-bottom: 10px;">Search</div>
+			<div id="clearFiltersButtonPortBottom"class="searchTaskButton" style="margin-bottom: 10px;">Reset filters</div>
+			<div id="clearMapButtonPortBottom"class="searchTaskButton" style="margin-bottom: 10px;">Clear map</div>
+		</div>
+	</div>
+
+	<div id="searchAquaContainer" style="margin: 10px 15%; display: none;">
+		<div style="font-size: 14px;">Search for AquaNIS species observation locations.</div>
+		<div id="searchFiltersContainerAqua" style="margin-top: 10px; clear: both;">
+			<div class="inputSection" style="margin-top: 20px;">
+				<input id="speciesNameInputAqua" class="searchInput"/>
+			</div>
+			<div style="font-size: 12px; color: #444444;"> Start typing species name and then choose one from the list. </div>
+			<div id="speciesNameStatusInfoAqua" style="display: none; color: #800000">
+				<div>
+					<span>Your selected species name status is </span>
+					<span id="speciesNameStatusAqua" style="font-weight: bold;"></span>
+				</div>
+				<div id="speciesAcceptedNameInfoAqua" style="display: none;">
+					<span>Accepted name of your selected species is </span>
+					<span id="speciesAcceptedNameAqua" style="font-weight: bold;"></span>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div id="searchButtonAquaBottom"class="searchTaskButton" style="margin-bottom: 10px;">Search</div>
+			<div id="clearFiltersButtonAquaBottom"class="searchTaskButton" style="margin-bottom: 10px;">Reset filters</div>
+			<div id="clearMapButtonAquaBottom"class="searchTaskButton" style="margin-bottom: 10px;">Clear map</div>
+		</div>
+	</div>
+
+	<div id="downloadContainer" style="margin: 10px 15%; display: none;">
+		<div style="color: #444444;">
+			By consulting and/or downloading data from HELCOM’s Ballast Water Exemptions Decision Support Tool, the user agrees to the following: The data can be used freely, given that each dataset is cited appropriately and HELCOM’s Ballast Water Exemptions Decision Support Tool is referred to maps.helcom.fi/website/ra_tool
+			<br/><br/>
+			Please note that your applied search filters will not affect observations dataset provided below. The taxonomy in this database is based on one of the international databases (WoRMS&gt; ITIS&gt; BioLib&gt; others), which is noted in the id section. Species with an existing Aphia ID retrieve their taxonomy entries via a customised script to <a href="http://www.marinespecies.org/index.php" target="_blank">WoRMS</a>.
+			<br/><br/>
+			The coordinate system for species observation data is WGS1984 (EPSG:4326)
+			<br/><br/>
+		</div>
+		<div style="margin-top: 10px;">
+			<span style="font-size: 18px; margin-top: 10px;"> Observations and ports GIS data </span>
+			<a class="downloadButton" style="margin-left: 10px;" href="http://metadata.helcom.fi/geonetwork/srv/eng/resources.get?uuid=4ebd5a90-7081-464a-af1a-f01a921c7160&fname=RA_download.gdb.zip&access=public">ESRI Geodatabase (ZIP)</a>
+			<div style="color: #444444;">
+				The file geodatabase contains geographic observations and ports data used in the HELCOM Ballast Water Exemptions Decision Support Tool.
+			</div>
+		</div>
+		<div style="margin-top: 10px;">
+			<span style="font-size: 18px; margin-top: 10px;"> Ports data </span>
+			<a class="downloadButton" style="margin-left: 10px;" href="http://metadata.helcom.fi/geonetwork/srv/eng/resources.get?uuid=4ebd5a90-7081-464a-af1a-f01a921c7160&fname=ports.csv&access=public">CSV</a>
+			<div style="color: #444444;">
+				The CSV file contains ports data used in the HELCOM Ballast Water Exemptions Decision Support Tool.
+			</div>
+		</div>
+		<div style="margin-top: 20px;">
+			<span style="font-size: 18px; margin-top: 10px;"> JHP port survey data report template </span>
+			<a class="downloadButton" style="margin-left: 10px;" href="http://metadata.helcom.fi/geonetwork/srv/eng/resources.get?uuid=4ebd5a90-7081-464a-af1a-f01a921c7160&fname=JHP Port survey data RA_tool_template.xlsm&access=public" target="_blank">XSLM</a>
+			<div style="color: #444444;">
+				The file allow users to report relevant data for risk assessment calculations for a given route between two ports. Please fill the template following the instruction on the information tab. The template can be submitted to data@helcom.fi.
+			</div>
+		</div>
+	</div>
+
+	<div id="accumulationContainer" style="margin: 10px 15%; display: none;">
+		<div style="font-size: 14px; margin-bottom: 10px; text-align: justify; text-justify: inter-word;">In this section, you can generate simple quality control curves for the port sampling data on species presence. Curves are produced separately for each of the different groups of organisms sampled in a given port (mobile epifauna, phytoplankton, fouling, benthos, zooplankton and pathogens).</div>
+		<div style="font-size: 14px; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">The theoretical background of these curves is the “species–area curve” or the relevé method for defining the minimum area, or number, of samples needed to characterise the species community. In a simplified way when the curve goes flat the number of samples has been sufficient to find the species present in the sampled area. If the curve does not flatten but continues raising it is likely that more species would have been found with more samples were taken (observations).</div>
+		<div style="font-size: 14px; margin-bottom: 10px;">Select port to display Species accumulative curves</div>
+		<div id="portsSelectContainer" style="width: 200px; border: 1px solid #00497F; padding-right: 1px;"></div>
+		<div id="notSelectedPortMessage" style="margin-top: 25px; font-size: 16px; display: none;">Please, select a port.</div>
+		<div id="notDataForPortMessage" style="margin-top: 25px; font-size: 16px; display: none;">No data for selected port.</div>
+		<div id="chartsContainer" style="margin-top: 20px; display: none;">
+			<div id="chartsContainerTitle" style="font-size: 18px; margin-top: 10px; margin-bottom: 10px;"></div>
+		</div>
+	</div>
+
+	<div id="resultInfoContainer" style="margin: 10px 15%; display: none;">
+		<div id="searchResultHeader" style="font-size: 14px;"></div>
+		<div>
+			<div id="updateSearchButtonTop"class="searchTaskButton" style="margin-bottom: 10px;">Update current search</div>
+			<div id="newSearchButtonTop"class="searchTaskButton" style="margin-bottom: 10px; font-weight: bold;">New search</div>
+		</div>
+		<div id="resultFiltersContainer">
+			<div style="font-size: 14px; margin-top: 20px; margin-bottom: 10px;"> Search filters: </div>
+			<div id="resultFilters"></div>
+		</div>
+
+		<div id="resultsContainer" style="margin-top: 20px; margin-bottom: 20px;"></div>
+		<div id="portDataGridContainer" style="margin-top: 20px; display: none;">
+			<div id="searchPortDataGrid_alert_message" style="margin-top: 10px; color: rgb(128, 0, 0); font-weight: bold; display: none;"></div>
+			<div id="searchPortDataGrid_message" style="margin-top: 10px; color: rgb(128, 0, 0); display: none;"></div>
+			<div id="searchPortDataGrid_clearFilter" class="mainLink" style="color: rgb(128, 0, 0); font-weight: bold; display: none;">
+				Remove filter
+			</div>
+			<div id="searchPortDataGrid" style="margin-top: 20px; height: 600px;"></div>
+		</div>
+		<div id="aquaDataGridContainer" style="margin-top: 20px; display: none;">
+			<div id="searchAquaDataGrid_alert_message" style="margin-top: 10px; color: rgb(128, 0, 0); font-weight: bold; display: none;"></div>
+			<div id="searchAquaDataGrid_message" style="margin-top: 10px; color: rgb(128, 0, 0); display: none;"></div>
+			<div id="searchAquaDataGrid_clearFilter" class="mainLink" style="color: rgb(128, 0, 0); font-weight: bold; display: none;">
+				Remove filter
+			</div>
+			<div id="searchAquaDataGrid" style="margin-top: 20px; height: 600px;"></div>
+		</div>
+		<div>
+			<div id="updateSearchButtonBottom"class="searchTaskButton" style="margin-bottom: 10px;">Update current search</div>
+			<div id="newSearchButtonBottom"class="searchTaskButton" style="margin-bottom: 10px; font-weight: bold;">New search</div>
+		</div>
+	</div>
+</div>

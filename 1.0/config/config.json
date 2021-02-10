@@ -1,0 +1,124 @@
+{
+	"services": {
+		"observations": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/0",
+		"observations_aquanis": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/1",
+		"ports": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/2",
+		"unique_names": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/4",
+		"unique_names_aquanis": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/9",
+		"unique_harbours": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/3",
+		"unique_ra_categories": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/5",
+		"unique_sampling_groups": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/7",
+		"ra_target_species": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/6",
+		"species": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/species_for_RA_webapp/MapServer/8",
+		"getStatus": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/tools_for_webapp/GPServer/Get%20status/execute?f=pjson",
+		"downloadShp": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/tools_for_RA_webapp/GPServer/GetShapefile/execute?f=pjson",
+		"pdf": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/tools_for_RA_webapp/GPServer/GenerateRiskPDF/execute?f=pjson",
+		"accumulation": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/tools_for_RA_webapp/GPServer/SpeciesAccumulation/execute?f=pjson",
+		"checkSampling": "https://maps.helcom.fi/arcgis/rest/services/Species_observations/tools_for_RA_webapp/GPServer/CheckSampling/execute?f=pjson",
+		"projection": "https://maps.helcom.fi/arcgis/rest/services/Utilities/Geometry/GeometryServer/project?f=pjson&outSR=4326"
+	},
+	"samplingGroups": [
+		"Benthos",
+		"Fouling",
+		"Mobile Epifauna",
+		"Phytoplankton",
+		"Zooplankton"
+	],
+	"speciesFields": {
+		"scientific_name": "Scientific name",
+		"aphia_id": "Aphia ID",
+		"itis_tsn": "ITIS TSN",
+		"source_other_id": "Other source ID",
+		"other_id": "Other ID",
+		"taxonomical_status": "Taxonomical status",
+		"accepted_name": "Accepted name",
+		"scientific_name_authorship": "Scientific name authorship",
+		"synonyms": {
+			"alias": "Synonyms",
+			"type": "semicolon"
+		},
+		"vernacular_names": {
+			"alias": "Vernacular names",
+			"type": "semicolon"
+		},
+		"kingdom": "Kingdom",
+		"phylum": "Phylum",
+		"rank": "Rank",
+		"class": "Class",
+		"order_": "Order",
+		"family": "Family",
+		"genus": "Genus",
+		"species_group": "Species group",
+		"salinity_min": "Species minimum salinity",
+		"salinity_max": "Species maximum salinity",
+		"species_specific_restriction": "Species specific restriction",
+		"date_last_modified": {
+			"alias": "Date last modified",
+			"type": "date"
+		},
+		"modification_to_taxonomy": "Modification to taxonomy",
+		"external_link": {
+			"alias": "External link",
+			"type": "url"
+		},
+		"aquanis_link": {
+			"alias": "Aquanis link",
+			"type": "url"
+		}
+	},
+	"obsFields" : {
+		"scientific_name": "Scientific name",
+		"aphia_id": "Aphia ID",
+		"taxonomical_status": "Taxonomical status",
+		"accepted_name": "Accepted name",
+		"synonyms": {
+			"alias": "Synonyms",
+			"type": "semicolon"
+		},
+		"species_url": {
+			"alias": "Species URL",
+			"type": "url"
+		},
+		"species_group": "Species group",
+		"salinity_min": "Species minimum salinity",
+		"salinity_max": "Species maximum salinity",
+		"data_source": "Data source",
+		"origin_of_data_collection": "Origin of data collection",
+		"ra_category": "Risk assessment category",
+		"decimal_latitude": "Observation latitude",
+		"decimal_longitude": "Observation longitude",
+		"coordinate_uncertainty": "Coordinate uncertainty",
+		"salinity_obs": "Observation salinity",
+  	"sampling_group": "Sampling group",
+		"year_collected": "Year collected",
+		"month_collected": "Month collected",
+		"day_collected": "Day collected",
+		"harbour_name": "Harbour name",
+		"harbour_code": "Harbour code",
+		"harbour_location": "Harbour location",
+		"field_number": "Field number",
+		"subunit": "Subunit",
+		"restriction_yes_no": "Restriction",
+		"restriction_description": "Restriction description",
+		"information_withheld": "Information withheld",
+		"data_generalization": "Data generalization",
+		"upload_date": {
+			"alias": "Upload date",
+			"type": "date"
+		},
+		"notes": "Notes",
+		"citation": "Citation"
+	},
+	"portFields": {
+		"harbour_location": "Harbour location",
+		"harbour_country": "Harbour country",
+		"salinity_port_min": "Salinity port min",
+		"salinity_port_max": "Salinity port max",
+		"harbour_code": "Harbour code",
+		"harbour_name": "Harbour name",
+		"latitude": "Latitude",
+		"longitude": "Longitude",
+		"ra_target": "Risk assessment target",
+		"harbour_label": "Harbour label"
+	}
+}

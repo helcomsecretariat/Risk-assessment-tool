@@ -1,0 +1,455 @@
+
+html, body {
+	position:absolute;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	color: #00497F;
+}
+
+#mainWindow {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	height: 100%;
+}
+
+#screenCover {
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	background-color: #ccc;
+	opacity: 0.5;
+	display: none;
+}
+
+#loadingCover {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/loading.gif');
+  /*background-image: url('../img/easter.png');*/
+  opacity: 0.4;
+	display: none;
+}
+
+/* START header section */
+#header {
+	position: relative;
+	border-bottom: solid 4px #00497F;
+	background-color: #B2C8D8;
+	overflow: hidden;
+	text-align: left;
+	padding: 0px 0px;
+}
+
+#helcomlogocontainer {
+  background-image: url("../img/HELCOM_logo_white_h50.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 240px;
+  height: 60px;
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+#interreglogocontainer {
+  background-image: url("../img/Interreg_white_60.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 225px;
+  height: 60px;
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+#osparlogocontainer {
+	background-image: url("../img/OSPAR_rgb_EN_short.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 202px;
+  height: 60px;
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+#databaselogocontainer {
+  background-image: url("../img/Ballast-Water-Exemptions-DST-logo-horizontal-60px.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 188px;
+  height: 60px;
+	margin-left: 0px;
+  float: left;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+#titlecontainer {
+  color: white;
+  font-size: 20pt;
+  float: left;
+  margin-top: 10px;
+  margin-left: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+.headerLink {
+	font-size: 16px;
+	color: #00497F;
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+.headerLink:hover {
+ 	color: white;
+}
+/* END header section */
+
+/* START map view section */
+#map {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color: #CFD3D4;
+}
+
+.esriBasemapGalleryLabelContainer {
+  display: none;
+}
+
+.esriPopup {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.esriPopup.popupStyle .esriPopupWrapper {
+  border: none;
+  border-radius: 0;
+  webkit-border-radius: 0;
+  color: #444;
+  /*opacity: 0.8;*/
+}
+
+.esriPopup.popupStyle .outerPointer {
+  /*border: none;
+  opacity: 0.5;*/
+}
+
+.esriPopup .contentPane {
+  color: #444;
+	font-size: 14px;
+}
+
+.esriPopup .contentPane table {
+  border-collapse: collapse;
+}
+
+.esriPopup .contentPane table {
+  border: 1px solid #ccc;
+}
+
+.esriPopup .contentPane td {
+  border: 1px solid #ccc;
+	padding: 2px;
+}
+
+.esriPopup .titlePane {
+  background-color: #00497F;
+  border-radius: 0;
+  webkit-border-radius: 0;
+}
+
+.esriPopup .actionsPane {
+  border-radius: 0;
+  webkit-border-radius: 0;
+}
+
+.esriPopup .contentPane .esriViewPopup .header {
+  text-align: center;
+  color: #444;
+}
+
+.esriViewPopup .hzLine {
+  border-top: 1px solid #00497F;
+}
+
+.esriPopup .titleButton.maximize {
+  display: none;
+}
+
+.esriPopup .pointer.hidden, .esriPopup .outerPointer.hidden {
+    display: none;
+}
+/* END map view section */
+
+/* START startup box */
+#startupBox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+	margin-top: -12%;
+	margin-left: -20%;
+	width: 40%;
+	height: 50%;
+  color: #00365C;
+  border: 3px solid #00497F;
+	background-color: #FFF;
+  z-index: 100;
+  display: none;
+}​
+
+.startupWindow {
+  width: 100%;
+  height: 100%;
+}
+
+#startupHeader {
+  text-align: center;
+  font-size: 22px;
+	font-family: 'Share', cursive;
+  background-color: #B2C8D8;
+  color: white;
+	height: 10%;
+}
+
+#startupFooter {
+	position:absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #B2C8D8;
+  color: white;
+	height: 10%;
+	width: 100%;
+	text-align: center;
+}
+
+#startupScrollContainer {
+	position: relative;
+	height: 80%;
+	overflow: auto;
+	padding: 0px 10px;
+}
+
+#startupNoteMessage {
+  text-align: center;
+  font-size: 20px;
+  color: #00AB97;
+}
+
+#startupButtonsContainer {
+  margin: 10px 0px;
+  width: 100%;
+  text-align: center;
+}
+
+#startupButton {
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+  width: 100px;
+  display:inline-block;
+  background-color: #00497F;
+  color: white;
+}
+
+#startupButton:hover {
+  font-weight: bold;
+  background-color: #00365C;
+}
+/* END startup box */
+
+/* START left panel */
+#leftPanelContainer {
+  width: 100%;
+  border-right: 2px solid #00497F;
+}
+
+.leftPanelLink {
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: #00497F;
+  font-size: 14px;
+}
+
+.leftPanelLink:hover {
+  font-weight: bold;
+}
+
+.downloadButton {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.downloadButton:hover {
+	font-weight: bold;
+}
+
+.searchTaskButton {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 20px;
+  display: inline-block;
+  float: right;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.searchTaskButton:hover {
+	font-weight: bold;
+}
+
+.inputSection {
+	border: 1px solid #00497F;
+	border-radius: 4px;
+}
+.searchInput {
+	font-size: 16px;
+  background-color: #FFF !important;
+	border-width: 0;
+  margin: 2px;
+	width: 95%;
+}
+
+.searchInput:hover {
+  background-color: #FFF;
+}
+/* SEARCH title panes */
+.titlePaneSection .dijitTitlePane {
+	border: 1px solid #00497F;
+	border-radius: 4px;
+}
+
+.titlePaneSection .dijitTitlePaneTitle {
+	font-size: 14px;
+	color: #00497F;
+}
+/* SEARCH title panes */
+
+/* SEARCH multiselects */
+.dojoxCheckedMultiSelectWrapper{
+	width: 100%;
+}
+
+.dojoxMultiSelectItemLabel {
+	white-space: normal;
+}
+
+.dojoxMultiSelectItem  {
+	margin-left: 5px;
+	width: 95%;
+}
+/* SEARCH multiselects */
+
+/* END left panel */
+
+
+#helcomosparmap {
+	background-image: url("../img/Helcom_Ospar_Joint_map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 848px;
+  height: 631px;
+  margin: 25px 25%;
+}
+
+#diagramExemptions {
+	margin: 25px 25% 0px;
+	max-width: 50%;
+	height: auto;
+}
+
+.riskImg {
+	max-width: 100%;
+	height: auto;
+}
+
+#gridContent {
+    width: 100%;
+    height: 400px;
+}
+
+.dojoxGrid {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+}
+
+#gridContent .dojoxGridCell {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+#gridContent .dojoxGridCell .dojoxGridCellOver {
+	background: #FFF;
+}
+
+#gridContent .dojoxGridRowOver .dojoxGridCell {
+	background: #FFF;
+}
+
+#gridContent .dojoxGridRowSelected .dojoxGridCell {
+	background: #FFF;
+}
+
+.selectPort {
+	font-size: 16px;
+	width: 200px;
+	border-width: 0px;
+}
+
+.selectPort .dijitButtonNode {
+	width: 10%;
+}
+
+.blueButton {
+    border: 2px solid #00365C;
+    background-color: #004A7F;
+		border-radius: 4px;
+    cursor: pointer;
+    height: 27px;
+    line-height: 27px;
+    color: white;
+		font-size: 16px;
+    text-align: center;
+		margin: 10px 10px 10px 0px;
+		padding: 0px 10px;
+}
+
+.blueButton:hover {
+	font-weight: bold;
+}
+
+.dojoxGridFBarDefFilterBtnIcon {
+	width: 43px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+	background-image: url('../img/filter.png');
+}
+
+.dojoxGridFBarClearFilterBtn {
+	font-size: 16px;
+}
